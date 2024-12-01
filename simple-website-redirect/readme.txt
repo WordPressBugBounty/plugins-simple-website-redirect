@@ -1,10 +1,10 @@
 === Simple Website Redirect ===
 Contributors: wpscholar
 Donate link: https://www.paypal.me/wpscholar
-Tags: site, website, redirect, redirection, forward, forwarding
+Tags: website, redirect, redirection, forward, forwarding
 Requires at least: 4.7
-Tested up to: 6.6
-Stable tag: 1.2.9
+Tested up to: 6.7
+Stable tag: 1.3.0
 Requires PHP: 7.4
 License: GPL V2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -57,6 +57,10 @@ If you don't meet the below requirements, I highly recommend you upgrade your Wo
 2. Advanced settings let you configure exclusions to redirects on the front end. Very useful if you still need to use a front-end page builder while redirecting everything else.
 
 == Changelog ==
+
+= 1.3.0 =
+* Fix issue where query params weren't properly being checked.
+* Allow all REST API calls to work without being redirected (allows WP editor and other page builders to work in the admin area).
 
 = 1.2.9 =
 * Fix issue where redirects were not properly preserving URL query parameters.

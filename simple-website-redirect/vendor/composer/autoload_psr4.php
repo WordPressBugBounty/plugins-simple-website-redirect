@@ -7,7 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'wpscholar\\' => array($vendorDir . '/wpscholar/url'),
-    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
-    'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
-    'Mustangostang\\' => array($vendorDir . '/wp-cli/mustangostang-spyc/src'),
 );

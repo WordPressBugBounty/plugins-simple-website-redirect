@@ -11,7 +11,7 @@
  * Plugin Name:       Simple Website Redirect
  * Plugin URI:        https://wpscholar.com/wordpress-plugins/simple-website-redirect/
  * Description:       A simple plugin designed to redirect an entire website (except the WordPress admin) to another website.
- * Version:           1.2.9
+ * Version:           1.3.0
  * Requires PHP:      7.4
  * Requires at least: 4.7
  * Author:            Micah Wood
@@ -141,7 +141,7 @@ class SimpleWebsiteRedirect {
 	}
 
 	/**
-	 * Get a collection of excluded paths.
+	 * Get excluded paths as provided by the user.
 	 *
 	 * @return array
 	 */
@@ -150,7 +150,7 @@ class SimpleWebsiteRedirect {
 	}
 
 	/**
-	 * Get a collection of excluded query parameters.
+	 * Get excluded query parameters as provided by the user.
 	 *
 	 * @return array
 	 */
@@ -232,18 +232,14 @@ class SimpleWebsiteRedirect {
 				'customize_changeset_uuid', // Allows editing via the WordPress Customizer
 				'elementor-preview', // Allows editing via Elementor
 				'preview_id', // Allows previewing in WordPress
+				'rest_route', // Allows REST API requests
 			)
 		);
 		$query_params    = self::$url->getQueryVars();
-		foreach ( $excluded_params as $name => $value ) {
+		foreach ( $excluded_params as $name ) {
 			if ( array_key_exists( $name, $query_params ) ) {
-				if ( empty( $value ) ) {
-					$should_redirect = false;
-					break;
-				} elseif ( $query_params[ $name ] === $value ) {
-					$should_redirect = false;
-					break;
-				}
+				$should_redirect = false;
+				break;
 			}
 		}
 
@@ -257,7 +253,7 @@ class SimpleWebsiteRedirect {
 	 *
 	 * @return array
 	 */
-	public static function filter_excluded_paths( $excluded_paths ) {
+	public static function filter_excluded_paths( array $excluded_paths ) {
 		return array_merge(
 			array(
 				'/admin',
@@ -663,4 +659,4 @@ class SimpleWebsiteRedirect {
 	}
 }
 
-SimpleWebsiteRedirect::initialize();
+add_action( 'plugins_loaded', array( 'SimpleWebsiteRedirect', 'initialize' ) );
