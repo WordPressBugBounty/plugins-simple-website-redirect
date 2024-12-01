@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'wpscholar/simple-website-redirect',
-        'pretty_version' => '1.3.0',
-        'version' => '1.3.0.0',
-        'reference' => '0641989e03bcc645d41c6d1e5e893752a2a3ccaf',
+        'pretty_version' => '1.3.1',
+        'version' => '1.3.1.0',
+        'reference' => '21b64fd50f55c2af5c39a902399b0833ea5695ea',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'wpscholar/simple-website-redirect' => array(
-            'pretty_version' => '1.3.0',
-            'version' => '1.3.0.0',
-            'reference' => '0641989e03bcc645d41c6d1e5e893752a2a3ccaf',
+            'pretty_version' => '1.3.1',
+            'version' => '1.3.1.0',
+            'reference' => '21b64fd50f55c2af5c39a902399b0833ea5695ea',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
