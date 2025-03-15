@@ -2,20 +2,26 @@
     "packages": [
         {
             "name": "wpscholar/url",
-            "version": "1.2.3",
-            "version_normalized": "1.2.3.0",
+            "version": "1.2.5",
+            "version_normalized": "1.2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpscholar/url.git",
-                "reference": "6e97376a1cf3a9f4d0f0ae976cece6123d1bd4b8"
+                "reference": "8a8fa6dc257d75353782a7acd9b1194a17d8eadd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpscholar/url/zipball/6e97376a1cf3a9f4d0f0ae976cece6123d1bd4b8",
-                "reference": "6e97376a1cf3a9f4d0f0ae976cece6123d1bd4b8",
+                "url": "https://api.github.com/repos/wpscholar/url/zipball/8a8fa6dc257d75353782a7acd9b1194a17d8eadd",
+                "reference": "8a8fa6dc257d75353782a7acd9b1194a17d8eadd",
                 "shasum": ""
             },
-            "time": "2024-12-01T20:43:41+00:00",
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5.36 || ^9.0"
+            },
+            "time": "2024-12-13T17:40:54+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -37,7 +43,7 @@
             "description": "A PHP class for parsing and manipulating URLs.",
             "support": {
                 "issues": "https://github.com/wpscholar/url/issues",
-                "source": "https://github.com/wpscholar/url/tree/1.2.3"
+                "source": "https://github.com/wpscholar/url/tree/1.2.5"
             },
             "install-path": "../wpscholar/url"
         }
